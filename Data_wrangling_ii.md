@@ -79,3 +79,14 @@ nyc_water =
   jsonlite::fromJSON() %>% 
   as_tibble()
 ```
+
+## BRFSS
+
+same process, different data
+
+``` r
+brfss_2010 = 
+  GET("https://chronicdata.cdc.gov/resource/acme-vg9e.cvs",
+      query = list("$limit" = 150000)) %>% 
+  content("parsed")
+```
