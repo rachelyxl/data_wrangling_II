@@ -119,7 +119,22 @@ brfss_2010 =
 ```
 
 
+## Some data aren't so nice 
 
+Let's look at Pokeman .. 
 
+```{r}
+pokeman_data = 
+  GET("https://pokeapi.co/api/v2/pokemon/1") %>% 
+  content()
+  
+pokeman_data$name
+pokeman_data$height
+pokeman_data$abilities
+```
+
+## Closing thoughts
+
+Be reasonable 
 
 
